@@ -151,17 +151,6 @@ String WaitForInputGyro() {
   return SerialGYRO.readStringUntil('\n');
 }
 
-//void dataGyro()
-//{ 
-//  while(SerialGYRO.available())
-//  {
-//    char hdt = (char)SerialGYRO.read();
-//    SerialPC.print(hdt);
-//  }
-//
-//  
-//}
-
 void outputMsg(String msg) {
   msg.toCharArray(CRCbuffer, sizeof(CRCbuffer));
   byte crc = convertToCRC(CRCbuffer);
